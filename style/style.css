@@ -1,0 +1,112 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: blueviolet;
+}
+
+.carpet
+{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 50px auto;
+    background: url(../image/carpet.svg) no-repeat;
+}
+
+.action
+{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: #fff;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid blueviolet;
+    border-radius: 4px;
+    color: blueviolet;
+    font: 700 18px Arial, Helvetica, sans-serif;
+    display: none;
+
+}
+
+.bottle
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+    background: url(../image/bottle.svg) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.bottle:disabled
+{
+    cursor: default;
+}
+
+.bottle-turn
+{
+    animation: turnBottle 0.5s 2 linear;
+}
+
+@keyframes turnBottle{
+    0%{
+        transform:  translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform:  translate(-50%, -50%) rotate(360deg);
+    }
+
+}
+
+.person div
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #fff 50%/cover no-repeat;
+    border-radius: 4px;
+}
+
+.person div:nth-child(1)
+{
+    top:25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../image/man1.svg);
+}
+
+.person div:nth-child(2)
+{
+    top:50%;
+    left: 25%;
+    transform: translateY(-50%);
+    background-image: url(../image/woman1.svg);
+}
+
+.person div:nth-child(3)
+{
+    top:50%;
+    right: 25%;
+    transform: translateY(-50%);
+    background-image: url(../image/woman2.svg);
+}
+
+.person div:nth-child(4)
+{
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../image/man2.svg);
+}
